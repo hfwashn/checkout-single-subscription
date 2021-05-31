@@ -1,16 +1,22 @@
-# Running the server
+# Checkout single subscription
+An [Express server](http://expressjs.com) implementation
 
-We included several RESTful server that each implement the same endpoints and
-logic. Pick the language you are most comfortable with and follow the
-instructions in the directory on how to run.
+## Requirements
+* Node v10+
+* [Configured .env file](../README.md)
 
-# Supported languages
+## How to run
 
-* [.NET](dotnet/README.md)
-* [Go (net/http)](go/README.md)
-* [Java (Spark)](java/README.md)
-* [JavaScript (Node)](node/README.md)
-* [PHP (Slim)](php-slim/README.md)
-* [PHP](php/README.md)
-* [Python (Flask)](python/README.md)
-* [Ruby (Sinatra)](ruby/README.md)
+1. Install dependencies
+
+```
+npm install
+```
+
+2. Run the application
+
+```
+npm start
+```
+
+3. Go to `localhost:4242` to see the demo

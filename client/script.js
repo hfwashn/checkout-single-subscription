@@ -15,7 +15,7 @@ var handleFetchResult = function(result) {
 
 // Create a Checkout Session with the selected plan ID
 var createCheckoutSession = function(priceId) {
-  return fetch("/create-checkout-session", {
+  return fetch("https://uu90ggnowb.execute-api.us-east-1.amazonaws.com/dev/create-checkout-session", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -40,7 +40,7 @@ var showErrorMessage = function(message) {
 };
 
 /* Get your Stripe publishable key to initialize Stripe.js */
-fetch("/setup")
+fetch("https://uu90ggnowb.execute-api.us-east-1.amazonaws.com/dev/setup")
   .then(handleFetchResult)
   .then(function(json) {
     var publishableKey = json.publishableKey;

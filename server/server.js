@@ -9,14 +9,7 @@ if (env.error) {
   throw new Error(`Unable to load the .env file from ${envFilePath}. Please copy .env.example to ${envFilePath}`);
 }
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2020-08-27',
-  appInfo: { // For sample support and debugging, not required for production:
-    name: "stripe-samples/checkout-single-subscription",
-    version: "0.0.1",
-    url: "https://github.com/stripe-samples/checkout-single-subscription"
-  }
-});
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 app.use(express.static(process.env.STATIC_DIR));
 app.use(
